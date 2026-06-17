@@ -160,7 +160,7 @@ h3 { font-size: 1.1rem; margin-top: 1.6rem; }
 .video .frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;   /* Clean default 16:9 box for desktop layout */
+  aspect-ratio: 16 / 10;   /* Clean default 16:9 box for desktop layout */
 }
 .video .frame iframe,
 .video .frame video {
