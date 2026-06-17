@@ -153,7 +153,6 @@ h3 { font-size: 1.1rem; margin-top: 1.6rem; }
 .video {
   border: 1px solid var(--rule);
   border-radius: 4px;
-  overflow: hidden;
   background: #000;
    
 .video .frame {
