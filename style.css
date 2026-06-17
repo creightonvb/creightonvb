@@ -289,10 +289,17 @@ h3 { font-size: 1.1rem; margin-top: 1.6rem; }
     grid-template-columns: 1fr;
   }
   .video .frame {
-    aspect-ratio: 16 / 10.2; /* Talls up the box slightly on mobile so Google's UI components fit perfectly */
+    aspect-ratio: 16 / 10.5; /* Slightly increased ratio for mobile */
+    min-height: 230px;       /* CRITICAL: Forces a minimum height so Google can't hide the buttons */
+    width: 100%;
+    position: relative;
   }
-  .video .frame iframe {
-    object-fit: contain; /* Keeps player boundaries aligned in both portrait and landscape orientation */
+ .video .frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 }
