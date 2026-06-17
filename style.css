@@ -160,8 +160,7 @@ h3 { font-size: 1.1rem; margin-top: 1.6rem; }
 .video .frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;   /* 16:9 + space for Drive player controls */
-  padding-top: 64%;
+  aspect-ratio: 16 / 9;   /* Clean default 16:9 box for desktop layout */
 }
 .video .frame iframe,
 .video .frame video {
@@ -285,4 +284,15 @@ h3 { font-size: 1.1rem; margin-top: 1.6rem; }
   h1 { font-size: 1.55rem; }
   h2 { font-size: 1.2rem; }
   main { padding-top: 1.25rem; }
+/* Video Layout Mobile Fixes */
+  .videos {
+    grid-template-columns: 1fr;
+  }
+  .video .frame {
+    aspect-ratio: 16 / 10.2; /* Talls up the box slightly on mobile so Google's UI components fit perfectly */
+  }
+  .video .frame iframe {
+    object-fit: contain; /* Keeps player boundaries aligned in both portrait and landscape orientation */
+  }
+}
 }
